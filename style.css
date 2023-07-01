@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #4a4e69;
+}
+
+/* adding header */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0096c7;
+    padding: 1.5rem 0;
+    color: #fff;
+}
+
+#searchRecipe {
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    outline: none;
+}
+
+/* search button */
+
+#searchButton{
+    background-color: #03045e;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#searchButton:hover {
+  background-color: #023e8a;
+}
+
+
+/* recipe section */
+
+.recipeSection {
+    text-align: center;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    width: 80%;
+    margin: 1rem auto;
+    place-items: center;
+}
+
+
+.recipe {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    max-width: 350px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.recipe:hover{
+    transform: scale(1.02);
+}
+
+.recipe img {
+    height: 300px;
+}
+
+.recipe h3 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.recipe p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #4a4a4a;
+}
+
+.recipe span{
+    font-weight: bold;
+    color: #000000;
+}
+
+.recipe button{
+    background-color: #03045e;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 1.2rem auto;
+}
+
+.recipe button:hover{
+    background-color: #023e8a;
+}
+
+/* pop up */
+
+.recipeDetails{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%) ;
+    background-color: #0096c7;
+    border-radius: 12px;
+    width: 70%;
+    height: 70%;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+    overflow-y: scroll;
+}
+
+.recipeDetailsContent{
+    padding: 30px;
+    font-size: 20px;
+}
+
+.recipeName{
+    text-align: center;
+    font-family: cursive;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+
+.recipeDetailsContent h3{
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.ingredientList li{
+    margin-left: 30px;
+    margin-top: 8px;
+}
+
+.recipeInstruction p{
+    line-height: 25px;
+    white-space: pre-line;
+}
+
+.centerImage{
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipeThumb{
+    width: 20%;
+    border-radius: 50%;
+}
+
+.watchVideo{
+    margin-top: 1rem;
+    text-decoration: none;
+    background-color: #03045e;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* adding scrollbar to recipe pop */
+
+.recipeDetails::-webkit-scrollbar{
+    width: 10px;
+}
+
+.recipeDetails::-webkit-scrollbar-thumb{
+    background-color: #b5b5ba;
+    border-radius: 16px;
+    --webkit-border-radius: 16px;
+}
+
+body::-webkit-scrollbar{
+    width: 16px;
+}
+
+/* /* adding scrollbar to pop up */ */
+
+body::-webkit-scrollbar-thumb{
+    background-color: #a1a1a1;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #ebebeb;
+}
+
+
+/* close button */
+
+.recipeCloseBtn{
+    background-color: #03045e;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+@media (max-width:550px) {
+    header {
+       flex-direction: column;
+       gap: 1rem;
+    }
+
+    .recipeSection{
+        width: 90%;
+    }
+
+    .recipeDetails{
+        width: 90%;
+        height: 90%;
+    }
+
+}
+
+@media (max-width:550px) {
+    .recipe{
+        max-width: 250px;
+    }
+    .recipeSection{
+        width: 95%;
+    }
+}
+
+
+
