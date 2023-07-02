@@ -92,6 +92,8 @@ const openRecipePopup = (element) => {
     recipeDetailsContent.parentElement.style.display = "block";
 }
 
+
+
 // Event listener for closing the recipe details popup
 
 recipeCloseBtn.addEventListener('click', ()=>{
@@ -108,6 +110,5 @@ searchButton.addEventListener('click', ()=> {
     return;
    }
    fetchRecipes(searchInput);
+   searchRecipe.value = "";
 })
-
-
